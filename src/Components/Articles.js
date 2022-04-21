@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
-const Articles = () => {
+//props.query
+const Articles = (props) => {
     const [articles, setArticles] = useState(null);
 
     useEffect(() => {
@@ -9,6 +9,7 @@ const Articles = () => {
             .then((res) => res.json())
             .then((data) => {
               console.log(data.hits);
+              console.log("Das sind meine Props! Also meine Einträge", props.query);
               setArticles(data.hits);
             })
             .catch((err) => console.log(err));
@@ -25,6 +26,7 @@ const Articles = () => {
         </>
         )
             :"Loading......."}
+            
           </div>
         </>
       );
