@@ -11,7 +11,7 @@ const Searchbar = () => {
         e.preventDefault();
         setSearch(e.target.firstChild.value);
         console.log(e.target.firstChild.value);
-        console.log(`Ich bin ein StateWert, ${search}`)
+        console.log(`StateVariable:  ${search}`)
         }
     
     return(
