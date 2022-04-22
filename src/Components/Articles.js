@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+
 //Die Seite wird rerendert, wenn wir die StateVariable ändern oder neue Props übergeben siehe useEffect
 //props.query
 const Articles = (props) => {
@@ -15,16 +16,16 @@ const Articles = (props) => {
                 setArticles(data.hits);
             })
             .catch((err) => console.log(err));
-    }, [url]);
+    },[url]);
 
     return ( 
       <>
         <div className = "App">{
             articles ? articles.map((article) =>
-                <div class = "article-box" >
-                <h2> { article.title } </h2> 
-                <a href = "article.url" > { article.url } </a> 
-                <p> Author: { article.author } </p> 
+                <div class = "article-box">
+                <h2> {article.title} </h2> 
+                <a href = "article.url"> Link </a> 
+                <p> Author: {article.author} </p> 
                 <hr/>
                 </div>
             ) : "Loading......."

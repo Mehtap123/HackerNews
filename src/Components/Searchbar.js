@@ -16,17 +16,12 @@ const Searchbar = () => {
     
     return(
         <div id="form-container">
-            
+            {/* <h1>Hacker-News</h1> */}
             <form onSubmit={handleSearch}>
                 <input type="text" id="text-field" placeholder="Search..."></input>
                 <button type="submit">Search</button>
             </form>
             
-
-            <div class="block">
-                <li id="search-list"></li>
-                
-            </div>
             <Articles query={search}/>
         </div>
             
